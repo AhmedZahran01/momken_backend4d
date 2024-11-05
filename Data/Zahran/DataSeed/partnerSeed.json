@@ -1,0 +1,16 @@
+[
+    {
+        "PhoneNumber": "+1234567890",
+        "Email": "userNumber1@example.com",
+        "Password": "securePassword123",
+        "PhoneNumberVerifed": false
+    },
+
+    {
+        "PhoneNumber": "+111234567890",
+        "Email": "userNumber2@example.com",
+        "Password": "securePassword123",
+        "PhoneNumberVerifed": false
+    } 
+ 
+]

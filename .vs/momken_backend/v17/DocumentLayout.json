@@ -1,0 +1,969 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\views\\pdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:views\\pdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\momken_backend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:momken_backend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\controllers\\partnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:controllers\\partnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\viewsdto\\invoicepdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\viewsdto\\invoicepdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\services\\pdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:services\\pdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\controllers\\adminpartner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:controllers\\adminpartner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\momken_backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:momken_backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\updatestoredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\updatestoredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\datarespons\\partnerclientroomwithclint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\datarespons\\partnerclientroomwithclint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\datarespons\\profiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\datarespons\\profiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\updateemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\updateemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\partnerstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\partnerstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\services\\uploadfileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:services\\uploadfileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241014081257_int[].cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241014081257_int[].cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241014071256_deliverytype as array.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241014071256_deliverytype as array.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\models\\partnerstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:models\\partnerstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\services\\tempimgservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:services\\tempimgservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\enums\\deliverytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:enums\\deliverytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\enums\\subscribepartnerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:enums\\subscribepartnerstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\enums\\uesertypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:enums\\uesertypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\datarespons\\productcreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\datarespons\\productcreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\models\\subscribepartner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:models\\subscribepartner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\providers\\productuseridprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:providers\\productuseridprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\controllers\\subscribepartnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:controllers\\subscribepartnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241013092237_partnerclientroomid .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241013092237_partnerclientroomid .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241013075402_message userid usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241013075402_message userid usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241013095724_isrecipientshow message .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241013095724_isrecipientshow message .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\hubs\\partnerhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:hubs\\partnerhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\datarespons\\partnerclintmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\datarespons\\partnerclintmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\models\\partnerclientroommessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:models\\partnerclientroommessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\models\\partnerclientroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:models\\partnerclientroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\clientroommessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\clientroommessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\datarespons\\subscribepartnerordersuccessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\datarespons\\subscribepartnerordersuccessdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\datarespons\\subscribepartnerstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\datarespons\\subscribepartnerstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\datarespons\\subscribepartnerordergetalldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\datarespons\\subscribepartnerordergetalldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241012133944_orderid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241012133944_orderid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241012135542_string amount .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241012135542_string amount .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\dtos\\myfatoorah\\getpaymentstatusv2resdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:dtos\\myfatoorah\\getpaymentstatusv2resdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012083535_Product TypeId SubTypeId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241012083535_Product TypeId SubTypeId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241011152036_partnerclientroommessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241011152036_partnerclientroommessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241011154627_clint remove partnerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241011154627_clint remove partnerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241011141129_partnerclientroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241011141129_partnerclientroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241011135627_ clients .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241011135627_ clients .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|d:\\fikra\\momken\\momken_backend\\momken_backend\\migrations\\20241012083912_product typeid subtypeid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96F507BB-3C2B-4C23-8F04-165A78146D08}|momken_backend.csproj|solutionrelative:migrations\\20241012083912_product typeid subtypeid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAYwIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T07:56:23.985Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-15T07:39:12.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PdfService.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Services\\PdfService.cs",
+              "RelativeDocumentMoniker": "Services\\PdfService.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Services\\PdfService.cs",
+              "RelativeToolTip": "Services\\PdfService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwEEAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T06:15:05.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pdf.cshtml",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Views\\Pdf.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pdf.cshtml",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Views\\Pdf.cshtml",
+              "RelativeToolTip": "Views\\Pdf.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T06:09:28.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminPartner.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\AdminPartner.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminPartner.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\AdminPartner.cs",
+              "RelativeToolTip": "Controllers\\AdminPartner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T15:46:08.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "momken_backend.http",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\momken_backend.http",
+              "RelativeDocumentMoniker": "momken_backend.http",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\momken_backend.http",
+              "RelativeToolTip": "momken_backend.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-10-12T10:08:34.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-14T09:28:23.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Services\\TokenService.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Services\\TokenService.cs",
+              "RelativeToolTip": "Services\\TokenService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:07:23.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InvoicePdf.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ViewsDto\\InvoicePdf.cs",
+              "RelativeDocumentMoniker": "Dtos\\ViewsDto\\InvoicePdf.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ViewsDto\\InvoicePdf.cs",
+              "RelativeToolTip": "Dtos\\ViewsDto\\InvoicePdf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T07:14:15.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PartnerController.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\PartnerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PartnerController.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\PartnerController.cs",
+              "RelativeToolTip": "Controllers\\PartnerController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAG4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T08:51:16.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABEAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T05:11:37.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-11T12:05:18.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAjwOoAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T05:24:29.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "momken_backend.csproj",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\momken_backend.csproj",
+              "RelativeDocumentMoniker": "momken_backend.csproj",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\momken_backend.csproj",
+              "RelativeToolTip": "momken_backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-11T07:35:19.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PartnerClientRoomWithClint.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\PartnerClientRoomWithClint.cs",
+              "RelativeDocumentMoniker": "Dtos\\DataRespons\\PartnerClientRoomWithClint.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\PartnerClientRoomWithClint.cs",
+              "RelativeToolTip": "Dtos\\DataRespons\\PartnerClientRoomWithClint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T09:50:52.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProfileDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\ProfileDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\DataRespons\\ProfileDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\ProfileDto.cs",
+              "RelativeToolTip": "Dtos\\DataRespons\\ProfileDto.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwCQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T07:53:32.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UpdateEmail.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\UpdateEmail.cs",
+              "RelativeDocumentMoniker": "Dtos\\UpdateEmail.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\UpdateEmail.cs",
+              "RelativeToolTip": "Dtos\\UpdateEmail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T14:54:51.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UpdateStoreDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\UpdateStoreDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\UpdateStoreDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\UpdateStoreDto.cs",
+              "RelativeToolTip": "Dtos\\UpdateStoreDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T09:03:58.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PartnerStore.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\PartnerStore.cs",
+              "RelativeDocumentMoniker": "Dtos\\PartnerStore.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\PartnerStore.cs",
+              "RelativeToolTip": "Dtos\\PartnerStore.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwDgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:12:17.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20241014071256_DeliveryType as array.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241014071256_DeliveryType as array.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241014071256_DeliveryType as array.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241014071256_DeliveryType as array.cs",
+              "RelativeToolTip": "Migrations\\20241014071256_DeliveryType as array.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBQAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:12:56.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TempImgService.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Services\\TempImgService.cs",
+              "RelativeDocumentMoniker": "Services\\TempImgService.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Services\\TempImgService.cs",
+              "RelativeToolTip": "Services\\TempImgService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T07:14:27.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20241014081257_int[].cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241014081257_int[].cs",
+              "RelativeDocumentMoniker": "Migrations\\20241014081257_int[].cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241014081257_int[].cs",
+              "RelativeToolTip": "Migrations\\20241014081257_int[].cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T08:12:58.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UploadFileService.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Services\\UploadFileService.cs",
+              "RelativeDocumentMoniker": "Services\\UploadFileService.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Services\\UploadFileService.cs",
+              "RelativeToolTip": "Services\\UploadFileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T07:13:58.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T08:31:15.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PartnerStore.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\PartnerStore.cs",
+              "RelativeDocumentMoniker": "Models\\PartnerStore.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\PartnerStore.cs",
+              "RelativeToolTip": "Models\\PartnerStore.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwDQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:07:56.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DeliveryType.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Enums\\DeliveryType.cs",
+              "RelativeDocumentMoniker": "Enums\\DeliveryType.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Enums\\DeliveryType.cs",
+              "RelativeToolTip": "Enums\\DeliveryType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:37:30.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SubscribePartnerStatus.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Enums\\SubscribePartnerStatus.cs",
+              "RelativeDocumentMoniker": "Enums\\SubscribePartnerStatus.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Enums\\SubscribePartnerStatus.cs",
+              "RelativeToolTip": "Enums\\SubscribePartnerStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T06:37:27.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UeserTypes.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Enums\\UeserTypes.cs",
+              "RelativeDocumentMoniker": "Enums\\UeserTypes.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Enums\\UeserTypes.cs",
+              "RelativeToolTip": "Enums\\UeserTypes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T08:19:41.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ProductCreated.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\ProductCreated.cs",
+              "RelativeDocumentMoniker": "Dtos\\DataRespons\\ProductCreated.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\ProductCreated.cs",
+              "RelativeToolTip": "Dtos\\DataRespons\\ProductCreated.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowBQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T09:12:16.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SubscribePartner.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\SubscribePartner.cs",
+              "RelativeDocumentMoniker": "Models\\SubscribePartner.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\SubscribePartner.cs",
+              "RelativeToolTip": "Models\\SubscribePartner.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T13:35:15.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientController.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Controllers\\ClientController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAjwFAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T15:32:36.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductUserIdProvider.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Providers\\ProductUserIdProvider.cs",
+              "RelativeDocumentMoniker": "Providers\\ProductUserIdProvider.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Providers\\ProductUserIdProvider.cs",
+              "RelativeToolTip": "Providers\\ProductUserIdProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T07:39:40.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SubscribePartnerController.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\SubscribePartnerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SubscribePartnerController.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\SubscribePartnerController.cs",
+              "RelativeToolTip": "Controllers\\SubscribePartnerController.cs",
+              "ViewState": "AgIAABsBAAAAAAAAAAAswC4BAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T07:50:27.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20241013092237_PartnerClientRoomId .cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241013092237_PartnerClientRoomId .cs",
+              "RelativeDocumentMoniker": "Migrations\\20241013092237_PartnerClientRoomId .cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241013092237_PartnerClientRoomId .cs",
+              "RelativeToolTip": "Migrations\\20241013092237_PartnerClientRoomId .cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwA0AAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T09:22:37.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20241013075402_message UserId UserType.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241013075402_message UserId UserType.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241013075402_message UserId UserType.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241013075402_message UserId UserType.cs",
+              "RelativeToolTip": "Migrations\\20241013075402_message UserId UserType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T07:54:02.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20241013095724_IsRecipientShow message .cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241013095724_IsRecipientShow message .cs",
+              "RelativeDocumentMoniker": "Migrations\\20241013095724_IsRecipientShow message .cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241013095724_IsRecipientShow message .cs",
+              "RelativeToolTip": "Migrations\\20241013095724_IsRecipientShow message .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T09:57:25.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PartnerHub.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Hubs\\PartnerHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\PartnerHub.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Hubs\\PartnerHub.cs",
+              "RelativeToolTip": "Hubs\\PartnerHub.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAIBZwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T08:07:28.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "PartnerClintMessage.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\PartnerClintMessage.cs",
+              "RelativeDocumentMoniker": "Dtos\\DataRespons\\PartnerClintMessage.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\PartnerClintMessage.cs",
+              "RelativeToolTip": "Dtos\\DataRespons\\PartnerClintMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T09:36:34.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "PartnerClientRoomMessage.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\PartnerClientRoomMessage.cs",
+              "RelativeDocumentMoniker": "Models\\PartnerClientRoomMessage.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\PartnerClientRoomMessage.cs",
+              "RelativeToolTip": "Models\\PartnerClientRoomMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T14:25:03.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Client.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "Models\\Client.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\Client.cs",
+              "RelativeToolTip": "Models\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T13:45:05.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PartnerClientRoom.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\PartnerClientRoom.cs",
+              "RelativeDocumentMoniker": "Models\\PartnerClientRoom.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Models\\PartnerClientRoom.cs",
+              "RelativeToolTip": "Models\\PartnerClientRoom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T13:35:15.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAowBoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T13:55:23.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ClientRoomMessageDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ClientRoomMessageDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ClientRoomMessageDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ClientRoomMessageDto.cs",
+              "RelativeToolTip": "Dtos\\ClientRoomMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T05:41:48.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T14:41:11.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "SubscribePartnerOrderSuccessDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\SubscribePartnerOrderSuccessDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\DataRespons\\SubscribePartnerOrderSuccessDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\SubscribePartnerOrderSuccessDto.cs",
+              "RelativeToolTip": "Dtos\\DataRespons\\SubscribePartnerOrderSuccessDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T14:14:34.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ProductUpdateDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ProductUpdateDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ProductUpdateDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ProductUpdateDto.cs",
+              "RelativeToolTip": "Dtos\\ProductUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T11:13:19.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ProductDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ProductDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ProductDto.cs",
+              "RelativeToolTip": "Dtos\\ProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T13:54:32.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "SubscribePartnerOrderGetAllDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\SubscribePartnerOrderGetAllDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\DataRespons\\SubscribePartnerOrderGetAllDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\SubscribePartnerOrderGetAllDto.cs",
+              "RelativeToolTip": "Dtos\\DataRespons\\SubscribePartnerOrderGetAllDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T14:26:00.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SubscribePartnerStatusDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\SubscribePartnerStatusDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\DataRespons\\SubscribePartnerStatusDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\DataRespons\\SubscribePartnerStatusDto.cs",
+              "RelativeToolTip": "Dtos\\DataRespons\\SubscribePartnerStatusDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T06:40:54.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ClientDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ClientDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ClientDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\ClientDto.cs",
+              "RelativeToolTip": "Dtos\\ClientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T04:59:40.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "20241012133944_orderId.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012133944_orderId.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241012133944_orderId.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012133944_orderId.cs",
+              "RelativeToolTip": "Migrations\\20241012133944_orderId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T13:39:45.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "20241012135542_string amount .cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012135542_string amount .cs",
+              "RelativeDocumentMoniker": "Migrations\\20241012135542_string amount .cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012135542_string amount .cs",
+              "RelativeToolTip": "Migrations\\20241012135542_string amount .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T13:55:42.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "GetPaymentStatusV2ResDataDto.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\Myfatoorah\\GetPaymentStatusV2ResDataDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Myfatoorah\\GetPaymentStatusV2ResDataDto.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Dtos\\Myfatoorah\\GetPaymentStatusV2ResDataDto.cs",
+              "RelativeToolTip": "Dtos\\Myfatoorah\\GetPaymentStatusV2ResDataDto.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAA4wD8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T13:53:31.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "20241012083912_Product TypeId SubTypeId.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012083912_Product TypeId SubTypeId.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241012083912_Product TypeId SubTypeId.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012083912_Product TypeId SubTypeId.cs",
+              "RelativeToolTip": "Migrations\\20241012083912_Product TypeId SubTypeId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T08:39:13.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "20241012083535_Product TypeId SubTypeId.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012083535_Product TypeId SubTypeId.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241012083535_Product TypeId SubTypeId.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241012083535_Product TypeId SubTypeId.cs",
+              "RelativeToolTip": "Migrations\\20241012083535_Product TypeId SubTypeId.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T08:35:35.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "20241011152036_PartnerClientRoomMessage.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241011152036_PartnerClientRoomMessage.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241011152036_PartnerClientRoomMessage.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241011152036_PartnerClientRoomMessage.cs",
+              "RelativeToolTip": "Migrations\\20241011152036_PartnerClientRoomMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T15:20:36.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "20241011154627_clint remove PartnerId.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241011154627_clint remove PartnerId.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241011154627_clint remove PartnerId.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241011154627_clint remove PartnerId.cs",
+              "RelativeToolTip": "Migrations\\20241011154627_clint remove PartnerId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T15:46:27.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "20241011141129_PartnerClientRoom.cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241011141129_PartnerClientRoom.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241011141129_PartnerClientRoom.cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241011141129_PartnerClientRoom.cs",
+              "RelativeToolTip": "Migrations\\20241011141129_PartnerClientRoom.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T14:11:30.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "20241011135627_ Clients .cs",
+              "DocumentMoniker": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241011135627_ Clients .cs",
+              "RelativeDocumentMoniker": "Migrations\\20241011135627_ Clients .cs",
+              "ToolTip": "D:\\Fikra\\momken\\momken_backend\\momken_backend\\Migrations\\20241011135627_ Clients .cs",
+              "RelativeToolTip": "Migrations\\20241011135627_ Clients .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T13:56:27.342Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

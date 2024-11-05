@@ -1,0 +1,13 @@
+[
+    {
+        "PhoneNumper": "+1234567890",
+        "FirstName": "John",
+        "FamilyName": "Doe",
+        "userName": "john_doe",
+        "Email": "johndoe@example.com",
+        "Password": "strongPassword123",
+        "PhoneNumberVerifed": false
+    }
+
+ 
+]

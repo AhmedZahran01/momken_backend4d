@@ -23,10 +23,10 @@ namespace momken_backend.Services.Zahran
                 Audience = _jwtOptionPartner.Audience,
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptionPartner.SingningKey)), SecurityAlgorithms.HmacSha256),
-                Subject = new ClaimsIdentity(
+                    Subject = new ClaimsIdentity(
                     new Claim[]
                     {
-                        new(ClaimTypes.NameIdentifier,client.Id.ToString()),
+                        new Claim(ClaimTypes.NameIdentifier, client.Id.ToString()),
                         new(ClaimTypes.MobilePhone,client.PhoneNumber),
                         new(ClaimTypes.Email,client.Email)
                     }

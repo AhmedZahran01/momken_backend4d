@@ -3,4 +3,9 @@
     public class JwtOptionPartner:JwtOption
     {
     }
+
+    public class JwtOptionclient : JwtOption
+    {
+    }
+
 }

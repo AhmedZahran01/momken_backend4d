@@ -32,7 +32,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllersWithViews();
 builder.Services.AddSwaggerGen(c => c.AddSignalRSwaggerGen());
 var jwtOptionPartner = builder.Configuration.GetSection("JwtPartner").Get<JwtOptionPartner>();
+var jwtOptionclient = builder.Configuration.GetSection("Jwtclient").Get<JwtOptionclient>();
 builder.Services.AddSingleton<JwtOptionPartner>(jwtOptionPartner);
+builder.Services.AddSingleton<JwtOptionclient>(jwtOptionclient);
 builder.Services.AddSingleton<IHashPasswordService, HashPasswordService>();
 builder.Services.AddSingleton<IJwtServicePartner, JwtServicePartner>();
 builder.Services.AddSingleton<IJwtServiceclient, JwtServiceClient>();
@@ -43,46 +45,75 @@ builder.Services.AddSingleton<ITokenService, TokenService>();
 builder.Services.AddSingleton<ITempImgService, TempImgService>();
 builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 builder.Services.AddScoped<PdfService>();
-builder.Services.AddAuthentication("Partner").AddJwtBearer(option =>
-{
-    option.SaveToken = true;
-    option.TokenValidationParameters = new TokenValidationParameters
+
+#region MyRegion
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
     {
-        ValidateIssuer = true,
-        ValidIssuer = jwtOptionPartner.Issuer,
-        ValidateAudience = true,
-        ValidAudience = jwtOptionPartner.Audience,
-        ValidateLifetime = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptionPartner.SingningKey))
-
-
-
-    };
-    option.Events = new JwtBearerEvents
-    {
-        OnMessageReceived = context =>
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
         {
-            var accessToken = context.Request.Query["access_token"];
-
-            // If the request is for our hub...
-            var path = context.HttpContext.Request.Path;
-            var startWith = path.StartsWithSegments("/hub");
-            if (!string.IsNullOrEmpty(accessToken) &&
-                (path.StartsWithSegments("/hub")))
+            ValidateIssuer = true,
+            ValidIssuer = jwtOptionPartner.Issuer,
+            ValidateAudience = true,
+            ValidAudience = jwtOptionPartner.Audience,
+            ValidateLifetime = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptionPartner.SingningKey))
+        };
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
             {
-                // Read the token out of the query string
-                context.Token = accessToken;
+                var accessToken = context.Request.Query["access_token"];
+                if (!string.IsNullOrEmpty(accessToken) && context.HttpContext.Request.Path.StartsWithSegments("/hub"))
+                {
+                    context.Token = accessToken;
+                }
+                return Task.CompletedTask;
+            },
+            OnAuthenticationFailed = context =>
+            {
+                Console.WriteLine("Authentication failed: " + context.Exception.Message);
+                return Task.CompletedTask;
             }
-            return Task.CompletedTask;
-        },
-        OnAuthenticationFailed = context =>
+        };
+    });
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("client", options =>
+    {
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
         {
-            // Log authentication failure
-            Console.WriteLine("Authentication failed: " + context.Exception.Message);
-            return Task.CompletedTask;
-        }
-    };
-});
+            ValidateIssuer = true,
+            ValidIssuer = jwtOptionPartner.Issuer,
+            ValidateAudience = true,
+            ValidAudience = jwtOptionPartner.Audience,
+            ValidateLifetime = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptionPartner.SingningKey))
+        };
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+                if (!string.IsNullOrEmpty(accessToken) && context.HttpContext.Request.Path.StartsWithSegments("/hub"))
+                {
+                    context.Token = accessToken;
+                }
+                return Task.CompletedTask;
+            },
+            OnAuthenticationFailed = context =>
+            {
+                Console.WriteLine("Authentication failed: " + context.Exception.Message);
+                return Task.CompletedTask;
+            }
+        };
+    });
+
+
+#endregion
+
 builder.Services.AddSignalR();
 builder.Services.AddSingleton<IUserIdProvider, ProductUserIdProvider>();
 builder.Services.AddCors();
@@ -110,6 +141,8 @@ builder.Services.AddSwaggerGen(c =>
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey
     });
+
+
 
     // Add security requirement for the swagger documentation
     c.AddSecurityRequirement(new OpenApiSecurityRequirement

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using momken_backend.Data;
@@ -12,9 +13,11 @@ using momken_backend.Dtos.Myfatoorah;
 namespace momken_backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241105142934_int17s")]
+    partial class int17s
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -117,11 +120,11 @@ namespace momken_backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<decimal>("OrderTotalPrice")
-                        .HasColumnType("numeric");
+                    b.Property<bool>("IsPaid")
+                        .HasColumnType("boolean");
 
-                    b.Property<int>("orderStatus")
-                        .HasColumnType("integer");
+                    b.Property<double>("OrderTotalPrice")
+                        .HasColumnType("double precision");
 
                     b.HasKey("Id");
 
@@ -306,34 +309,21 @@ namespace momken_backend.Migrations
 
             modelBuilder.Entity("momken_backend.Models.PartnerStoreClientReview", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTimeOffset>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("created_at");
-
-                    b.Property<int>("EvaluationNumber")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("ReviewMessage")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<Guid>("clientId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("partnerStoreId")
                         .HasColumnType("uuid");
 
-                    b.HasKey("Id");
+                    b.Property<string>("ReviewMessage")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.HasIndex("clientId");
+                    b.HasKey("clientId", "partnerStoreId");
 
                     b.HasIndex("partnerStoreId");
 
-                    b.ToTable("ReviewsOfClient");
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("momken_backend.Models.PartnerStoreSubType", b =>
@@ -412,6 +402,9 @@ namespace momken_backend.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Quanttity")
                         .HasColumnType("integer");
 
                     b.Property<DateTime?>("deletedtAt")
@@ -562,7 +555,7 @@ namespace momken_backend.Migrations
             modelBuilder.Entity("momken_backend.Models.Product", b =>
                 {
                     b.HasOne("momken_backend.Models.OrdersClient", null)
-                        .WithMany("OrderproductsWithItsQuantity")
+                        .WithMany("Orderproducts")
                         .HasForeignKey("OrdersClientId");
 
                     b.HasOne("momken_backend.Models.PartnerStore", "partnerStore")
@@ -590,7 +583,7 @@ namespace momken_backend.Migrations
 
             modelBuilder.Entity("momken_backend.Models.OrdersClient", b =>
                 {
-                    b.Navigation("OrderproductsWithItsQuantity");
+                    b.Navigation("Orderproducts");
                 });
 
             modelBuilder.Entity("momken_backend.Models.Partner", b =>

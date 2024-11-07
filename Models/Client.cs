@@ -19,11 +19,11 @@ namespace momken_backend.Models
 
         #endregion
 
-      
+
         #region Navigational Properties Region
 
 
-
+        public List<PartnerStoreClientReview>? partnerStoreClientReviews { get; set; }
 
         #endregion
 

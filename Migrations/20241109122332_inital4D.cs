@@ -8,32 +8,19 @@ using momken_backend.Dtos.Myfatoorah;
 namespace momken_backend.Migrations
 {
     /// <inheritdoc />
-    public partial class intialcreateforZahran : Migration
+    public partial class inital4D : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Categories",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    CategoryName = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categories", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Clients",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    PhoneNumper = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     FirstName = table.Column<string>(type: "text", nullable: false),
                     FamilyName = table.Column<string>(type: "text", nullable: false),
-                    userName = table.Column<string>(type: "text", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     Email = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
                     Password = table.Column<string>(type: "text", nullable: false),
                     PhoneNumberVerifed = table.Column<bool>(type: "boolean", nullable: false),
@@ -57,6 +44,19 @@ namespace momken_backend.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MyfatoorahTempDatas", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "orders",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    OrderTotalPrice = table.Column<decimal>(type: "numeric", nullable: false),
+                    orderStatus = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_orders", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -174,6 +174,44 @@ namespace momken_backend.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "PartnerStores",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    City = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
+                    FirstName = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
+                    FamilyName = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
+                    IDNumber = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    ImgNationalID = table.Column<string>(type: "text", nullable: false),
+                    DateStartComOrFreeRegister = table.Column<DateOnly>(type: "date", maxLength: 255, nullable: false),
+                    DateEndComOrFreeRegister = table.Column<DateOnly>(type: "date", nullable: false),
+                    ImgStore = table.Column<string>(type: "text", nullable: false),
+                    NumberComOrFreeRegister = table.Column<string>(type: "text", nullable: false),
+                    NameComOrFreeRegister = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
+                    EmgComOrFreeRegister = table.Column<string>(type: "text", nullable: false),
+                    StoreName = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
+                    DeliveryType = table.Column<int[]>(type: "integer[]", nullable: false),
+                    PartnerId = table.Column<Guid>(type: "uuid", nullable: false),
+                    TypeId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PartnerStores", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PartnerStores_PartnerStoreTypes_TypeId",
+                        column: x => x.TypeId,
+                        principalTable: "PartnerStoreTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PartnerStores_Partners_PartnerId",
+                        column: x => x.PartnerId,
+                        principalTable: "Partners",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "PartnerStoreSubTypes",
                 columns: table => new
                 {
@@ -193,57 +231,6 @@ namespace momken_backend.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PartnerStores",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    City = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
-                    FirstName = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
-                    FamilyName = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
-                    IDNumber = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    ImgNationalID = table.Column<string>(type: "text", nullable: false),
-                    DateStartComOrFreeRegister = table.Column<DateOnly>(type: "date", maxLength: 255, nullable: false),
-                    DateEndComOrFreeRegister = table.Column<DateOnly>(type: "date", nullable: false),
-                    ImgStore = table.Column<string>(type: "text", nullable: false),
-                    NumberComOrFreeRegister = table.Column<string>(type: "text", nullable: false),
-                    NameComOrFreeRegister = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
-                    EmgComOrFreeRegister = table.Column<string>(type: "text", nullable: false),
-                    StoreName = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
-                    DeliveryType = table.Column<int[]>(type: "integer[]", nullable: false),
-                    categoryId = table.Column<Guid>(type: "uuid", nullable: false),
-                    TypeId = table.Column<Guid>(type: "uuid", nullable: false),
-                    SubTypeId = table.Column<Guid>(type: "uuid", nullable: true),
-                    PartnerId = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PartnerStores", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PartnerStores_Categories_categoryId",
-                        column: x => x.categoryId,
-                        principalTable: "Categories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PartnerStores_PartnerStoreSubTypes_SubTypeId",
-                        column: x => x.SubTypeId,
-                        principalTable: "PartnerStoreSubTypes",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_PartnerStores_PartnerStoreTypes_TypeId",
-                        column: x => x.TypeId,
-                        principalTable: "PartnerStoreTypes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PartnerStores_Partners_PartnerId",
-                        column: x => x.PartnerId,
-                        principalTable: "Partners",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -256,9 +243,8 @@ namespace momken_backend.Migrations
                     MineImg = table.Column<string>(type: "text", nullable: false),
                     MoreImgs = table.Column<string[]>(type: "text[]", nullable: false),
                     deleted_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    TypeId = table.Column<Guid>(type: "uuid", nullable: true),
-                    SubTypeId = table.Column<Guid>(type: "uuid", nullable: true),
-                    partnerId = table.Column<Guid>(type: "uuid", nullable: false),
+                    partnerStoreId = table.Column<Guid>(type: "uuid", nullable: true),
+                    OrdersClientId = table.Column<Guid>(type: "uuid", nullable: true),
                     created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     update_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -266,19 +252,41 @@ namespace momken_backend.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Products_PartnerStoreSubTypes_SubTypeId",
-                        column: x => x.SubTypeId,
-                        principalTable: "PartnerStoreSubTypes",
+                        name: "FK_Products_PartnerStores_partnerStoreId",
+                        column: x => x.partnerStoreId,
+                        principalTable: "PartnerStores",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Products_PartnerStoreTypes_TypeId",
-                        column: x => x.TypeId,
-                        principalTable: "PartnerStoreTypes",
+                        name: "FK_Products_orders_OrdersClientId",
+                        column: x => x.OrdersClientId,
+                        principalTable: "orders",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ReviewsOfClient",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    clientId = table.Column<Guid>(type: "uuid", nullable: false),
+                    partnerStoreId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ReviewMessage = table.Column<string>(type: "text", nullable: false),
+                    created_at = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
+                    EvaluationNumber = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ReviewsOfClient", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Products_Partners_partnerId",
-                        column: x => x.partnerId,
-                        principalTable: "Partners",
+                        name: "FK_ReviewsOfClient_Clients_clientId",
+                        column: x => x.clientId,
+                        principalTable: "Clients",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ReviewsOfClient_PartnerStores_partnerStoreId",
+                        column: x => x.partnerStoreId,
+                        principalTable: "PartnerStores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -299,19 +307,9 @@ namespace momken_backend.Migrations
                 column: "PartnerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PartnerStores_categoryId",
-                table: "PartnerStores",
-                column: "categoryId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_PartnerStores_PartnerId",
                 table: "PartnerStores",
                 column: "PartnerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PartnerStores_SubTypeId",
-                table: "PartnerStores",
-                column: "SubTypeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PartnerStores_TypeId",
@@ -324,19 +322,24 @@ namespace momken_backend.Migrations
                 column: "TypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_partnerId",
+                name: "IX_Products_OrdersClientId",
                 table: "Products",
-                column: "partnerId");
+                column: "OrdersClientId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_SubTypeId",
+                name: "IX_Products_partnerStoreId",
                 table: "Products",
-                column: "SubTypeId");
+                column: "partnerStoreId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_TypeId",
-                table: "Products",
-                column: "TypeId");
+                name: "IX_ReviewsOfClient_clientId",
+                table: "ReviewsOfClient",
+                column: "clientId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ReviewsOfClient_partnerStoreId",
+                table: "ReviewsOfClient",
+                column: "partnerStoreId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SubscribePartner_PartnerId",
@@ -360,28 +363,31 @@ namespace momken_backend.Migrations
                 name: "PartnerClientRooms");
 
             migrationBuilder.DropTable(
-                name: "PartnerStores");
+                name: "PartnerStoreSubTypes");
 
             migrationBuilder.DropTable(
                 name: "Products");
 
             migrationBuilder.DropTable(
+                name: "ReviewsOfClient");
+
+            migrationBuilder.DropTable(
                 name: "SubscribePartner");
+
+            migrationBuilder.DropTable(
+                name: "orders");
 
             migrationBuilder.DropTable(
                 name: "Clients");
 
             migrationBuilder.DropTable(
-                name: "Categories");
-
-            migrationBuilder.DropTable(
-                name: "PartnerStoreSubTypes");
-
-            migrationBuilder.DropTable(
-                name: "Partners");
+                name: "PartnerStores");
 
             migrationBuilder.DropTable(
                 name: "PartnerStoreTypes");
+
+            migrationBuilder.DropTable(
+                name: "Partners");
         }
     }
 }

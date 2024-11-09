@@ -15,14 +15,14 @@ namespace momken_backend.Controllers.Zahran
     [ApiController]
     public class ClientController : ControllerBase
     {
-      
+
         #region Constructor Region
 
         private readonly AppDbContext _context;
         private readonly IHashPasswordService _HashPasswordService;
         private readonly IJwtServiceclient _jwtServiceclient;
 
-        public ClientController(AppDbContext context, IHashPasswordService HashPasswordService , IJwtServiceclient jwtServiceclient)
+        public ClientController(AppDbContext context, IHashPasswordService HashPasswordService, IJwtServiceclient jwtServiceclient)
         {
             _context = context;
             _HashPasswordService = HashPasswordService;
@@ -31,7 +31,7 @@ namespace momken_backend.Controllers.Zahran
 
         #endregion
 
-        
+
         #region Auth Region
 
         #region Register Region 
@@ -39,21 +39,47 @@ namespace momken_backend.Controllers.Zahran
         [HttpPost("singup")]
         public async Task<IActionResult> Singup([FromBody] ClientSDto client)
         {
-          
             #region Check Phone Used Or Not Region
 
-            var userFinded = await _context.Clients.Where(p => p.PhoneNumber == client.PhoneNumber).FirstOrDefaultAsync();
+            var userFinded = await _context.Clients.FirstOrDefaultAsync(p => p.PhoneNumber == client.PhoneNumber);
 
-            if (userFinded != null)
+            #region Add New Client Region
+
+            if (userFinded == null)
             {
-                return BadRequest(new GlobalResponseNoDataDto
+
+                var newclient = await _context.Clients.AddAsync(new Models.Client
                 {
-                    success = false,
-                    message = "PhoneNumber  is used before"
+                    FirstName = client.FirstName,
+                    FamilyName = client.FamilyName,
+                    Email = client.Email,
+                    PhoneNumber = client.PhoneNumber,
+                    Password = _HashPasswordService.HashPassword(client.Password),
                 });
-            } 
+
+                await _context.SaveChangesAsync();
+                return Ok(new GlobalResponseDebugDto<ClientBodyResDto, OTPDto>
+                {
+                    success = true,
+                    message = "New Client is Added Successfully",
+                    data = new Dtos.DataRespons.ClientBodyResDto
+                    {
+                        Email = client.Email,
+                        Id = newclient.Entity.Id,
+                        PhoneNumber = client.PhoneNumber,
+
+                    },
+                });
+            }
 
             #endregion
+
+            return BadRequest(new GlobalResponseNoDataDto
+            {
+                success = false,
+                message = "PhoneNumber  is used before "
+            });
+
 
             #region Comment Full Name Not Used Region
 
@@ -76,9 +102,9 @@ namespace momken_backend.Controllers.Zahran
             //}
 
             #endregion
-
+          
             #region Comment Email Used Before Region
-            
+
             //var userFindedEmail = await _context.Clients.Where(p => p.Email == client.Email).FirstOrDefaultAsync();
             //if (userFindedEmail is null)
             //{
@@ -92,36 +118,9 @@ namespace momken_backend.Controllers.Zahran
 
             #endregion
 
-            #region Add New Client Region
-           
-            var newclient = await _context.Clients.AddAsync(new Models.Client
-            {
-                FirstName = client.FirstName,
-                FamilyName = client.FamilyName,
-                Email = client.Email,
-                PhoneNumber = client.PhoneNumber,
-                Password = _HashPasswordService.HashPassword(client.Password),
-                Id = Guid.NewGuid()
-            });
-
-            await _context.SaveChangesAsync();
-            return Ok(new GlobalResponseDebugDto<PartnerBodyResDto, OTPDto>
-            {
-                success = true,
-                message = "Added new client",
-                data = new Dtos.DataRespons.PartnerBodyResDto
-                {
-                    Email = client.Email,
-                    Id = newclient.Entity.Id,
-                    PhoneNumper = client.PhoneNumber,
-
-                },
-            });
 
             #endregion
-       
-
-        }
+        } 
 
         #endregion
 
@@ -129,57 +128,57 @@ namespace momken_backend.Controllers.Zahran
         #region Login 
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] Dtos.PartnerLogin clientLogin)
+        public async Task<IActionResult> Login([FromBody] Dtos.ClientLoginDto clientLogin)
         {
-            var clientFound = await _context.Clients.FirstOrDefaultAsync(p => p.PhoneNumber == clientLogin.PhoneNumper);
-            
-            if (clientFound == null)
+            var clientFound = new Client();
+            if (clientLogin.PhoneNumber is not null)
             {
-                return BadRequest(new GlobalResponseNoDataDto
-                {
-                    success = false,
-                    message = "PhoneNumper or passwors wroung"
-                });
-            } 
+                clientFound = await _context.Clients.FirstOrDefaultAsync(p => p.PhoneNumber == clientLogin.PhoneNumber);
 
-            var resault = _HashPasswordService.VerifyHashedPassword(clientFound.Password, clientLogin.Password);
-            if (!resault)
-            {
-                return BadRequest(new GlobalResponseNoDataDto
+                if (clientFound != null)
                 {
-                    success = false,
-                    message = "PhoneNumper or passwors wroung"
-                });
-            }
-            var token = _jwtServiceclient.creatJwtToken(clientFound);
-            return Ok(new GlobalResponseDebugDto<LoginBodyDto, string>
-            {
-                success = true,
-                message = "Login success",
-                data = new LoginBodyDto
-                {
-                    Partner = new PartnerBodyResDto
+                    var resault = _HashPasswordService.VerifyHashedPassword(clientFound.Password, clientLogin.Password);
+                    if (resault)
                     {
-                        Email = clientFound.Email,
-                        Id = clientFound.Id,
-                        PhoneNumper = clientFound.PhoneNumber,
-                    },
-                    Token = token
-                },
-                debug = "No debug Data"
-            });
+                        var token = _jwtServiceclient.creatJwtToken(clientFound);
+                        return Ok(new GlobalResponseDebugDto<LoginClientBodyDto, string>
+                        {
+                            success = true,
+                            message = "Login success",
+                            data = new LoginClientBodyDto
+                            {
+                                client = new ClientBodyResDto
+                                {
+                                    Email = clientFound.Email,
+                                    Id = clientFound.Id,
+                                    PhoneNumber = clientFound.PhoneNumber,
+                                },
+                                Token = token
+                            },
+                            debug = "No debug Data"
+                        });
 
+
+                    }
+                }
+            }
+
+            return BadRequest(new GlobalResponseNoDataDto
+            {
+                success = false,
+                message = "Phone number or password is incorrect."
+            });
         }
 
         #endregion
 
         #endregion
 
-      
-        #region كل الاقسام
+        
+        #region كل الاقسام  اللي فيها متاجر
 
 
-        [HttpGet("AllStoreTyoes")]
+        [HttpGet("Get All Partner Store Types")]
         public async Task<IActionResult> GetAllPartnerStoreTypes()
         {
 
@@ -200,7 +199,7 @@ namespace momken_backend.Controllers.Zahran
             return Ok(new GlobalResponseDebugDto<List<PartnerStoreTypeCategoriesDto>, string>
             {
                 success = true,
-                message = "Get All Partner Store Types Category",
+                message = "Get All Partner Store Types Categories",
                 data = GetAllPartnerStoreTypesDtos,
                 debug = "No data for debug"
             });
@@ -209,45 +208,36 @@ namespace momken_backend.Controllers.Zahran
         #endregion
 
 
+
         #region كل المتاجر
 
 
-        [HttpGet("GetAllPartnerStore")]
+        [HttpGet("Get All Partner Store Or Specific One By It is Id")]
         public async Task<IActionResult> GetAllPartnerStore(Guid? partnerStoreTypeById)
         {
-                var GetAllPartnerStoreDto = new List<PartnerStoreDto>();
-            
+            var GetAllPartnerStores =  _context.PartnerStores
+                   .Select(store => new Dtos.Zahran.PartnerStoreDto
+                   {
+                        Id = store.Id,
+                        City = store.City,
+                        StoreName = store.StoreName,
+                        ImgStore = store.ImgStore,
+                        FirstName = store.FirstName,
+                        FamilyName = store.FamilyName,
+                        TypeId = store.TypeId,
+                  
+                   
+                   });
 
-                var GetAllPartnerStores =   _context.PartnerStores.Select(store => new Dtos.Zahran.PartnerStoreDto
-                {
-                    Id = store.Id,
-                    City = store.City,
-                    DateEndComOrFreeRegister = store.DateEndComOrFreeRegister,
-                    DateStartComOrFreeRegister = store.DateStartComOrFreeRegister,
-                    StoreName = store.StoreName,
-                    ImgStore = store.ImgStore,
-                    DeliveryType = store.DeliveryType,
-                    EmgComOrFreeRegister = store.EmgComOrFreeRegister,
-                    FamilyName = store.FamilyName,
-                    FirstName = store.FirstName,
-                    IDNumber = store.IDNumber,
-                    ImgNationalID = store.ImgNationalID,
-                    NameComOrFreeRegister = store.NameComOrFreeRegister,
-                    TypeId = store.TypeId,
-                    NumberComOrFreeRegister = store.NumberComOrFreeRegister
-
-                });
-        
-             if(partnerStoreTypeById is not null)
-             {
-                GetAllPartnerStores.Where( p => p.TypeId == partnerStoreTypeById);
-             }
-
+            if (partnerStoreTypeById is not null)
+            {
+                GetAllPartnerStores = GetAllPartnerStores.Where(p => p.TypeId == partnerStoreTypeById);
+            }
 
             return Ok(new GlobalResponseDebugDto<List<PartnerStoreDto>, string>
             {
                 success = true,
-                message = "Get All Partner Store ",
+                message = "Get All Partner Store",
                 data = await GetAllPartnerStores.ToListAsync(),
                 debug = "No data for debug"
             });
@@ -263,38 +253,59 @@ namespace momken_backend.Controllers.Zahran
         #region Get All Partner Store Product
 
 
-        [HttpGet("AllPartnerStoresBasedOnPartnerStoreId/{PartnerStoreId}")]
+        [HttpGet("All Partner Stores Products By PartnerStoreId/{PartnerStoreId}")]
         public async Task<IActionResult> GetAllPartnerStoreProduct(Guid PartnerStoreId)
         {
-
-            var GetAllPartnerStores = await _context.Products.Where(c => PartnerStoreId == c.partnerStoreId).Include(p => p.partnerStore)
-                                                  .ToListAsync();
-
-            var ProductDtoHandle = new List<Dtos.Zahran.ProductDto>();
-            foreach (var product in GetAllPartnerStores)
-            {
-                ProductDtoHandle.Add(new Dtos.Zahran.ProductDto
+            var existPartnerStore = await _context.PartnerStores.FirstOrDefaultAsync(ps => ps.Id == PartnerStoreId);
+            
+            if (existPartnerStore is not null)
+            { 
+                var GetAllPartnerStoresProducts = await _context.Products.Where(c => PartnerStoreId == c.partnerStoreId)
+                                                   .Include(p => p.partnerStore).ToListAsync();
+ 
+                var ProductDtoHandle = new List<Dtos.Zahran.ProductDto>();
+                if (GetAllPartnerStoresProducts.Count() == 0  )
                 {
-                    Id = product.Id,
-                    Name = product.Name,
-                    Description = product.Description,
-                    Price = product.Price,
-                    Calories = product.Calories,
-                    Allergens = product.Allergens,
-                    MineImg = "public/"+product.MineImg,
-                    MoreImgs =  product.MoreImgs.Select(i => "public/" + i).ToArray(),
-                    deletedtAt = product.deletedtAt,
-                    partnerStoreId = product.partnerStoreId,
+                    return Ok(new GlobalResponseDebugDto<List<Dtos.Zahran.ProductDto>, string>
+                    {
+                        success = true,
+                        message = "There Is No Products Here", 
+                        debug = "No data for debug"
+                    });
+                }
 
+                foreach (var product in GetAllPartnerStoresProducts)
+                {
+                    ProductDtoHandle.Add(new Dtos.Zahran.ProductDto
+                    {
+                        Id = product.Id,
+                        Name = product.Name,
+                        Description = product.Description,
+                        Price = product.Price,
+                        Calories = product.Calories,
+                        Allergens = product.Allergens,
+                        MineImg = "public/" + product.MineImg,
+                        MoreImgs = product.MoreImgs.Select(i => "public/" + i).ToArray(),
+                        deletedtAt = product.deletedtAt,
+                        partnerStoreId = product.partnerStoreId,
+
+                    });
+                }
+                
+                return Ok(new GlobalResponseDebugDto<List<Dtos.Zahran.ProductDto>, string>
+                {
+                    success = true,
+                    message = " All Partner Store Products ",
+                    data = ProductDtoHandle,
+                    debug = "No data for debug"
                 });
             }
-            return Ok(new GlobalResponseDebugDto<List<Dtos.Zahran.ProductDto>, string>
+            return BadRequest(new GlobalResponseNoDataDto
             {
-                success = true,
-                message = "Get All Partner Store Types Category",
-                data = ProductDtoHandle,
-                debug = "No data for debug"
+                success = false,
+                message = "A Bad Request you have Made , There is No Partner Store Like this "
             });
+ 
         }
 
 
@@ -309,32 +320,42 @@ namespace momken_backend.Controllers.Zahran
         {
 
             var GetAllPartnerStores = await _context.Products.Where(p => ProductId == p.Id).ToListAsync();
-
-            var ProductDtoHandle = new List<Dtos.Zahran.ProductDto>();
-            foreach (var product in GetAllPartnerStores)
+            if (GetAllPartnerStores.Count() != 0)
             {
-                ProductDtoHandle.Add(new Dtos.Zahran.ProductDto
+                var ProductDtoHandle = new List<Dtos.Zahran.ProductDto>();
+                foreach (var product in GetAllPartnerStores)
                 {
-                    Id = product.Id,
-                    Name = product.Name,
-                    Description = product.Description,
-                    Price = product.Price,
-                    Calories = product.Calories,
-                    Allergens = product.Allergens,
-                    MineImg = product.MineImg,
-                    MoreImgs = product.MoreImgs,
-                    deletedtAt = product.deletedtAt,
-                    partnerStoreId = product.partnerStoreId,
+                    ProductDtoHandle.Add(new Dtos.Zahran.ProductDto
+                    {
+                        Id = product.Id,
+                        Name = product.Name,
+                        Description = product.Description,
+                        Price = product.Price,
+                        Calories = product.Calories,
+                        Allergens = product.Allergens,
+                        MineImg = product.MineImg,
+                        MoreImgs = product.MoreImgs,
+                        deletedtAt = product.deletedtAt,
+                        partnerStoreId = product.partnerStoreId,
 
+                    });
+                }
+                return Ok(new GlobalResponseDebugDto<List<Dtos.Zahran.ProductDto>, string>
+                {
+                    success = true,
+                    message = "Get All Partner Store Types Category",
+                    data = ProductDtoHandle,
+                    debug = "No data for debug"
                 });
             }
-            return Ok(new GlobalResponseDebugDto<List<Dtos.Zahran.ProductDto>, string>
+
+            return BadRequest(new GlobalResponseNoDataDto
             {
-                success = true,
-                message = "Get All Partner Store Types Category",
-                data = ProductDtoHandle,
-                debug = "No data for debug"
+                success = false,
+                message = "A Bad Request you have Made , There is No Product Like this "
             });
+
+
         }
 
 

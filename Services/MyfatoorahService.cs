@@ -19,7 +19,8 @@ namespace momken_backend.Services
             };
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _myfatoorahConfiguration.Token);
         }
-        public async Task<ExecutePaymentResBodyV2> GetUrlFromExecutePayment(string callBackUrl, string errorUrl, int paymentMethodId, int invoiceValue, List<InvoiceItem> invoiceItems)
+        public async Task<ExecutePaymentResBodyV2> GetUrlFromExecutePayment(string callBackUrl, string errorUrl, 
+                                           int paymentMethodId, int invoiceValue, List<InvoiceItem> invoiceItems)
         {
 
             var response = await _httpClient.PostAsJsonAsync<ExecutePaymentV2>("/v2/ExecutePayment", new ExecutePaymentV2
@@ -38,17 +39,17 @@ namespace momken_backend.Services
         }
 
       public async   Task<GetPaymentStatusV2ResDataDto> GetPaymentStatusV2WithInvoiceId(string invoiceId)
-        {
+      {
             var response = await _httpClient.PostAsJsonAsync("/v2/GetPaymentStatus", new
                 {
-                Key= invoiceId,
-                KeyType= "InvoiceId"
+                 Key= invoiceId,
+                 KeyType= "InvoiceId"
 
                 });
             var dataJson = await response.Content.ReadFromJsonAsync<GetPaymentStatusV2ResDataDto>();
             return dataJson;
             
-        }
+      }
     }
 
     public interface IMyfatoorahService

@@ -32,7 +32,22 @@ namespace momken_backend.Dtos
         public string Password { get; set; }
 
 
-    }public class PartnerResetPasswoed
+    }
+
+    public class ClientLoginDto
+    {
+
+        [Required]
+        [Phone]
+        [MaxLength(100)]
+        public string PhoneNumber { get; set; }
+
+        public string Password { get; set; }
+
+
+    }
+
+    public class PartnerResetPasswoed
     {
         public string Password { get; set; }
 

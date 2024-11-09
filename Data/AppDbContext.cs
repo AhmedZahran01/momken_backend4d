@@ -16,13 +16,16 @@ namespace momken_backend.Data
 
 
         #region  Db Sets
-         
+
+        public DbSet<PartnerStoreClientReview> ReviewsOfClient { get; set; }
+        public DbSet<OrdersClient> orders { get; set; }
         public DbSet<Partner> Partners { get; set; }
         public DbSet<PartnerStore> PartnerStores { get; set; }
         public DbSet<PartnerStoreSubType> PartnerStoreSubTypes { get; set; }
         public DbSet<PartnerStoreTypeCategories> PartnerStoreTypes { get; set; }
         public DbSet<OTP> OTPs { get; set; }
         public DbSet<MyfatoorahTempData> MyfatoorahTempDatas { get; set; }
+        public DbSet<MyfatoorahClientTempData> myfatoorahClientTempDatas { get; set; }
         public DbSet<SubscribePartner> SubscribePartner { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Client> Clients { get; set; }
@@ -30,7 +33,12 @@ namespace momken_backend.Data
         public DbSet<PartnerClientRoomMessage> PartnerClientRoomMessages { get; set; }
 
         #endregion
-    
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+ 
+        }
     }
     
 }

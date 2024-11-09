@@ -5,7 +5,7 @@
 namespace momken_backend.Migrations
 {
     /// <inheritdoc />
-    public partial class intialcreateforZahran9N : Migration
+    public partial class inital4D3s : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

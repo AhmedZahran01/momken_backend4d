@@ -15,8 +15,7 @@ namespace momken_backend.Models
         public string Name { get; set; }
 
         [Required]
-        public string Description { get; set; }
-
+        public string Description { get; set; } 
         [Required]
         public int Price { get; set; }
 
@@ -36,13 +35,19 @@ namespace momken_backend.Models
         #region Navigational Properties Region
 
 
-        [ForeignKey(nameof(Models.PartnerStoreTypeCategories))]
-        public Guid? TypeId { get; set; }
 
         public Guid? partnerStoreId { get; set; }
         public PartnerStore? partnerStore { get; set; }
 
-        public PartnerStoreTypeCategories? Type { get; set; }
+
+        //public Guid partnerId { get; set; }  
+        //public Partner partner { get; set; }
+
+
+
+        //[ForeignKey(nameof(Models.PartnerStoreTypeCategories))]
+        //public Guid? TypeId { get; set; }
+        //public PartnerStoreTypeCategories? Type { get; set; }
 
 
         //[ForeignKey(nameof(Models.PartnerStoreSubType))]
@@ -50,15 +55,7 @@ namespace momken_backend.Models
         //public PartnerStoreSubType? SubType { get; set; }
 
 
-
-
-        public Guid partnerId { get; set; }  
-        public Partner partner { get; set; } 
-        
-       
-
-      
-        #endregion 
+        #endregion
 
     }
 }

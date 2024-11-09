@@ -25,7 +25,8 @@ namespace momken_backend.Controllers
         private readonly MyfatoorahConfiguration _myfatoorahConfiguration;
         private readonly AppDbContext _context;
 
-        public SubscribePartnerController(IMyfatoorahService myfatoorahService,ITokenService tokenService,IConfiguration configuration, AppDbContext context)
+        public SubscribePartnerController(IMyfatoorahService myfatoorahService,ITokenService tokenService,
+                                             IConfiguration configuration, AppDbContext context)
         {
             _myfatoorahService = myfatoorahService;
             _myfatoorahConfiguration = configuration.GetSection("Myfatoorah").Get<MyfatoorahConfiguration>();
@@ -71,12 +72,12 @@ namespace momken_backend.Controllers
             var errorUrl = Url.Link("OrderSuccess", new {id= dataTemp.Entity.Id});
             var MyfaRes = await _myfatoorahService.GetUrlFromExecutePayment(callBackUrl, errorUrl, subscribeOrderDto.paymentMethodId, subscribeOrderDto.MonthCount* priceForMonth, new List<InvoiceItem>
             {
-                new InvoiceItem
-                {
-           ItemName = "Subscribe Partner",
-       Quantity = subscribeOrderDto.MonthCount,
-       UnitPrice = priceForMonth
-    }
+                     new InvoiceItem
+                     {
+                            ItemName = "Subscribe Partner",
+                        Quantity = subscribeOrderDto.MonthCount,
+                        UnitPrice = priceForMonth
+                     }
             });
             dataTemp.Entity.Content = new SubscribeOrderTempData
             {

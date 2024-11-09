@@ -60,7 +60,7 @@ namespace momken_backend.Data.Zahran
                 }
             }
               
-            if (dbcontext.PartnerStores.Count() == 1)
+            if (dbcontext.PartnerStores.Count() == 0)
             {
                 var CpartnersData = File.
                            ReadAllText("../momken_backend/Data/Zahran/DataSeed/partnerStoreSeed.json");
@@ -78,7 +78,7 @@ namespace momken_backend.Data.Zahran
             }
 
 
-            if (dbcontext.Products.Count() > 0)
+            if (dbcontext.Products.Count() == 0)
             {
                 var ClientsData = File.
                            ReadAllText("../momken_backend/Data/Zahran/DataSeed/PoructSeed.json");

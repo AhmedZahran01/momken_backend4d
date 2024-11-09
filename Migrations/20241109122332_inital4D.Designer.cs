@@ -13,8 +13,8 @@ using momken_backend.Dtos.Myfatoorah;
 namespace momken_backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241104084029_intialcreateforZahran6N")]
-    partial class intialcreateforZahran6N
+    [Migration("20241109122332_inital4D")]
+    partial class inital4D
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,21 +53,17 @@ namespace momken_backend.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<bool>("PhoneNumberVerifed")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("PhoneNumper")
+                    b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
+                    b.Property<bool>("PhoneNumberVerifed")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTime>("updatAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("update_at");
-
-                    b.Property<string>("userName")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -116,6 +112,23 @@ namespace momken_backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("OTPs");
+                });
+
+            modelBuilder.Entity("momken_backend.Models.OrdersClient", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("OrderTotalPrice")
+                        .HasColumnType("numeric");
+
+                    b.Property<int>("orderStatus")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("orders");
                 });
 
             modelBuilder.Entity("momken_backend.Models.Partner", b =>
@@ -285,18 +298,45 @@ namespace momken_backend.Migrations
                         .IsRequired()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("categoryId")
-                        .HasColumnType("uuid");
-
                     b.HasKey("Id");
 
                     b.HasIndex("PartnerId");
 
                     b.HasIndex("TypeId");
 
-                    b.HasIndex("categoryId");
-
                     b.ToTable("PartnerStores");
+                });
+
+            modelBuilder.Entity("momken_backend.Models.PartnerStoreClientReview", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at");
+
+                    b.Property<int>("EvaluationNumber")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ReviewMessage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("clientId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("partnerStoreId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("clientId");
+
+                    b.HasIndex("partnerStoreId");
+
+                    b.ToTable("ReviewsOfClient");
                 });
 
             modelBuilder.Entity("momken_backend.Models.PartnerStoreSubType", b =>
@@ -320,7 +360,7 @@ namespace momken_backend.Migrations
                     b.ToTable("PartnerStoreSubTypes");
                 });
 
-            modelBuilder.Entity("momken_backend.Models.PartnerStoreType", b =>
+            modelBuilder.Entity("momken_backend.Models.PartnerStoreTypeCategories", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -371,20 +411,17 @@ namespace momken_backend.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)");
 
+                    b.Property<Guid?>("OrdersClientId")
+                        .HasColumnType("uuid");
+
                     b.Property<int>("Price")
                         .HasColumnType("integer");
-
-                    b.Property<Guid?>("TypeId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("categoryId")
-                        .HasColumnType("uuid");
 
                     b.Property<DateTime?>("deletedtAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("deleted_at");
 
-                    b.Property<Guid>("partnerId")
+                    b.Property<Guid?>("partnerStoreId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("updatAt")
@@ -393,11 +430,9 @@ namespace momken_backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TypeId");
+                    b.HasIndex("OrdersClientId");
 
-                    b.HasIndex("categoryId");
-
-                    b.HasIndex("partnerId");
+                    b.HasIndex("partnerStoreId");
 
                     b.ToTable("Products");
                 });
@@ -459,21 +494,6 @@ namespace momken_backend.Migrations
                     b.ToTable("SubscribePartner");
                 });
 
-            modelBuilder.Entity("momken_backend.Models.Zahran.Category", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("categories");
-                });
-
             modelBuilder.Entity("momken_backend.Models.PartnerClientRoom", b =>
                 {
                     b.HasOne("momken_backend.Models.Client", "Client")
@@ -501,29 +521,40 @@ namespace momken_backend.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("momken_backend.Models.PartnerStoreType", "Type")
-                        .WithMany()
+                    b.HasOne("momken_backend.Models.PartnerStoreTypeCategories", "Type")
+                        .WithMany("Products")
                         .HasForeignKey("TypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("momken_backend.Models.Zahran.Category", "category")
-                        .WithMany("PartnerStore")
-                        .HasForeignKey("categoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Partner");
 
                     b.Navigation("Type");
+                });
 
-                    b.Navigation("category");
+            modelBuilder.Entity("momken_backend.Models.PartnerStoreClientReview", b =>
+                {
+                    b.HasOne("momken_backend.Models.Client", "client")
+                        .WithMany("partnerStoreClientReviews")
+                        .HasForeignKey("clientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("momken_backend.Models.PartnerStore", "partnerStore")
+                        .WithMany("partnerStoreClientReviews")
+                        .HasForeignKey("partnerStoreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("client");
+
+                    b.Navigation("partnerStore");
                 });
 
             modelBuilder.Entity("momken_backend.Models.PartnerStoreSubType", b =>
                 {
-                    b.HasOne("momken_backend.Models.PartnerStoreType", "Type")
-                        .WithMany("SubTypes")
+                    b.HasOne("momken_backend.Models.PartnerStoreTypeCategories", "Type")
+                        .WithMany()
                         .HasForeignKey("TypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -533,27 +564,15 @@ namespace momken_backend.Migrations
 
             modelBuilder.Entity("momken_backend.Models.Product", b =>
                 {
-                    b.HasOne("momken_backend.Models.PartnerStoreType", "Type")
+                    b.HasOne("momken_backend.Models.OrdersClient", null)
+                        .WithMany("OrderproductsWithItsQuantity")
+                        .HasForeignKey("OrdersClientId");
+
+                    b.HasOne("momken_backend.Models.PartnerStore", "partnerStore")
                         .WithMany()
-                        .HasForeignKey("TypeId");
+                        .HasForeignKey("partnerStoreId");
 
-                    b.HasOne("momken_backend.Models.Zahran.Category", "category")
-                        .WithMany()
-                        .HasForeignKey("categoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("momken_backend.Models.Partner", "partner")
-                        .WithMany()
-                        .HasForeignKey("partnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Type");
-
-                    b.Navigation("category");
-
-                    b.Navigation("partner");
+                    b.Navigation("partnerStore");
                 });
 
             modelBuilder.Entity("momken_backend.Models.SubscribePartner", b =>
@@ -567,19 +586,29 @@ namespace momken_backend.Migrations
                     b.Navigation("partner");
                 });
 
+            modelBuilder.Entity("momken_backend.Models.Client", b =>
+                {
+                    b.Navigation("partnerStoreClientReviews");
+                });
+
+            modelBuilder.Entity("momken_backend.Models.OrdersClient", b =>
+                {
+                    b.Navigation("OrderproductsWithItsQuantity");
+                });
+
             modelBuilder.Entity("momken_backend.Models.Partner", b =>
                 {
                     b.Navigation("PartnerStore");
                 });
 
-            modelBuilder.Entity("momken_backend.Models.PartnerStoreType", b =>
+            modelBuilder.Entity("momken_backend.Models.PartnerStore", b =>
                 {
-                    b.Navigation("SubTypes");
+                    b.Navigation("partnerStoreClientReviews");
                 });
 
-            modelBuilder.Entity("momken_backend.Models.Zahran.Category", b =>
+            modelBuilder.Entity("momken_backend.Models.PartnerStoreTypeCategories", b =>
                 {
-                    b.Navigation("PartnerStore");
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

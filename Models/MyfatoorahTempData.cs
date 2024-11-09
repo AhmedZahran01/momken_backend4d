@@ -20,4 +20,13 @@ namespace momken_backend.Models
         [Column("update_at")]
         public DateTime updatet { get; set; } = DateTime.UtcNow;
     }
+
+    public class MyfatoorahClientTempData:ModelBase
+    {
+         
+        [Required]
+        [Column(TypeName = "jsonb")]
+        public PaidClientOrderTempData Content { get; set; }
+         
+    }
 }

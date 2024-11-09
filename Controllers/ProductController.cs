@@ -42,11 +42,11 @@ namespace momken_backend.Controllers
                  Calories = productDto.Calories,
                  Description = productDto.Description,
                  MineImg = mineImg,
-                 TypeId = productDto.Type,
+                 //TypeId = productDto.Type,
                  //SubTypeId= productDto.SubType,
                  MoreImgs = moreImgs.ToArray(),
                  Price = productDto.Price,
-                 partnerId=userId
+                 //partnerId=userId
             });
             var typeName = await _context.PartnerStoreTypes.Where(t => t.Id == productDto.Type).FirstOrDefaultAsync();
             await _context.SaveChangesAsync();
@@ -61,7 +61,7 @@ namespace momken_backend.Controllers
                     Calories = prodact.Entity.Calories,
                     Name = prodact.Entity.Name,
                     Type= typeName?.Name??"",
-                    TypeId= prodact.Entity.TypeId,
+                    //TypeId= prodact.Entity.TypeId,
                     Description = prodact.Entity.Description,
                     MineImg = "public/" + mineImg,
                     MoreImgs = prodact.Entity.MoreImgs.Select(i => "public/" + i).ToArray(),
@@ -79,7 +79,7 @@ namespace momken_backend.Controllers
             var nameIdentifierClaim = claimsIdentity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
             Guid userId = Guid.Parse(nameIdentifierClaim.Value);
 
-         var allProdacts = await _context.Products.Where(p=>p.partnerId==userId&&p.deletedtAt==null).Select(p=>new ProductCreated
+         var allProdacts = await _context.Products.Where(p=>/*p.partnerId==userId&&*/p.deletedtAt==null).Select(p=>new ProductCreated
             {
                 Allergens=p.Allergens,
                 Name = p.Name,
@@ -88,8 +88,8 @@ namespace momken_backend.Controllers
                 Price=p.Price,
                 Description=p.Description,
                 MineImg= "public/" + p.MineImg,
-                Type= p.Type.Name,
-                TypeId= p.TypeId,
+                //Type= p.Type.Name,
+                //TypeId= p.TypeId,
                 MoreImgs = p.MoreImgs.Select(i => "public/" + i).ToArray(),
             }).ToListAsync();
             return Ok(new GlobalResponseDebugDto<List<ProductCreated>, string>
@@ -106,7 +106,7 @@ namespace momken_backend.Controllers
             var claimsIdentity = HttpContext.User.Identity as ClaimsIdentity;
             var nameIdentifierClaim = claimsIdentity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
             Guid userId = Guid.Parse(nameIdentifierClaim.Value);
-           var prodact = await _context.Products.Where(p => p.Id == id && p.partnerId == userId&&p.deletedtAt==null).FirstOrDefaultAsync();
+           var prodact = await _context.Products.Where(p => p.Id == id &&/* p.partnerId == userId&&*/p.deletedtAt==null).FirstOrDefaultAsync();
 
             if (prodact == null)
             {
@@ -133,14 +133,14 @@ namespace momken_backend.Controllers
             var claimsIdentity = HttpContext.User.Identity as ClaimsIdentity;
             var nameIdentifierClaim = claimsIdentity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
             Guid userId = Guid.Parse(nameIdentifierClaim.Value);
-            var prodact = await _context.Products.Where(p => p.Id == id && p.partnerId == userId && p.deletedtAt == null).Select(p => new ProductCreated
+            var prodact = await _context.Products.Where(p => p.Id == id &&/* p.partnerId == userId &&*/ p.deletedtAt == null).Select(p => new ProductCreated
             {
                 Allergens = p.Allergens,
                 Calories = p.Calories,
                 Description = p.Description,
                 Id = p.Id,
-                Type = p.Type.Name,
-                TypeId=p.TypeId,
+               // Type = p.Type.Name,
+               // TypeId=p.TypeId,
                 MineImg = "public/" + p.MineImg,
                 MoreImgs = p.MoreImgs.Select(i => "public/" + i).ToArray(),
                 Name = p.Name,
@@ -173,7 +173,7 @@ namespace momken_backend.Controllers
                 return Unauthorized();
             }
             Guid userId = Guid.Parse(nameIdentifierClaim.Value);
-           var prodactFound = await _context.Products.Where(p=>p.Id==id&&p.partnerId==userId&&p.deletedtAt==null).FirstOrDefaultAsync();
+           var prodactFound = await _context.Products.Where(p=>p.Id==id/*&&p.partnerId==userId*/ && p.deletedtAt==null).FirstOrDefaultAsync();
             if (prodactFound == null) { 
                 return NotFound(new GlobalResponseNoDataDto
                 {
@@ -213,9 +213,9 @@ namespace momken_backend.Controllers
             prodactFound.Allergens=productUpdateDto.Allergens??prodactFound.Allergens;
             prodactFound.MineImg = mineImg??prodactFound.MineImg;
             prodactFound.MoreImgs = moreImgs.IsNullOrEmpty()? prodactFound.MoreImgs:moreImgs.ToArray();
-            prodactFound.TypeId = productUpdateDto.Type ?? prodactFound.TypeId;
+            //prodactFound.TypeId = productUpdateDto.Type ?? prodactFound.TypeId;
             prodactFound.updatAt = DateTime.UtcNow;
-            var type = _context.PartnerStoreTypes.FirstOrDefault(t=>t.Id == prodactFound.TypeId);
+            //var type = _context.PartnerStoreTypes.FirstOrDefault(t=>t.Id == prodactFound.TypeId);
             await _context.SaveChangesAsync();
 
             return Ok(new GlobalResponseDebugDto<Dtos.DataRespons.ProductCreated, string>
@@ -228,8 +228,8 @@ namespace momken_backend.Controllers
                     Allergens = prodactFound.Allergens,
                     Calories = prodactFound.Calories,
                     Name = prodactFound.Name,
-                    Type = type?.Name ?? "",
-                    TypeId= type?.Id,
+                    //Type = type?.Name ?? "",
+                    //TypeId= type?.Id,
                     Description = prodactFound.Description,
                     MineImg = "public/" + mineImg,
                     MoreImgs = prodactFound.MoreImgs.Select(i => "public/" + i).ToArray(),

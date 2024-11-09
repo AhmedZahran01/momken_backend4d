@@ -49,9 +49,12 @@ namespace momken_backend.Models
         [Required]
         public PartnerStoreTypeCategories? Type { get; set; }
 
+        public List<PartnerStoreClientReview>? partnerStoreClientReviews { get; set; }
+
+
         //public Guid? SubTypeId { get; set; }
         //public PartnerStoreSubType? SubType { get; set; }
-      
+
         #endregion
 
     }

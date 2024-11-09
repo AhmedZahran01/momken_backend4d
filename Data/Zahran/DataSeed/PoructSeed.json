@@ -1,143 +1,147 @@
 [
-    {
-        "Name": "تي شيرت",
-        "Description": "قميص قطني مريح وأنيق.",
-        "Price": 250,
-        "Calories": "N/A",
-        "Allergens": "N/A",
-        "MineImg": "https://example.com/images/tshirt_main.jpg",
-        "MoreImgs": [
-            "https://example.com/images/tshirt_1.jpg",
-            "https://example.com/images/tshirt_2.jpg"
-        ],
-        "deletedtAt": null,
-        "TypeId": "0a9fecc9-ffc7-4079-9b36-dace8ffd169f",
-        "partnerId": "fa358ce8-98c4-4af1-b519-59ccccba0c11",
-        "partnerStoreId": "24c92f47-0f6d-4e43-872d-6bfb51ed84cd"
-    },
+  {
+    "Name": "تي شيرت",
+    "Description": "قميص قطني مريح وأنيق.",
+    "Price": 250,
+    "Calories": "N/A",
+    "Allergens": "N/A",
+    "MineImg": "https://example.com/images/tshirt_main.jpg",
+    "MoreImgs": [
+      "https://example.com/images/tshirt_1.jpg",
+      "https://example.com/images/tshirt_2.jpg"
+    ],
+    "deletedtAt": null,
+    "TypeId": "31e5c4d0-ef20-4d59-aa7e-3113b1baef8b",
+    "PartnerId": "618199c0-3a00-402a-b04c-8a2ae88b44fe",
+    "partnerStoreId": "ae4b37c6-c00f-4592-b878-3961cabba011"
+  },
 
 
-    {
-        "Name": "حاسوب محمول",
-        "Description": "حاسوب محمول عالي الأداء للعمل والألعاب.",
-        "Price": 1200,
-        "Calories": "N/A",
-        "Allergens": "N/A",
-        "MineImg": "https://example.com/images/laptop_main.jpg",
-        "MoreImgs": [
-            "https://example.com/images/laptop_1.jpg",
-            "https://example.com/images/laptop_2.jpg"
-        ],
-        "deletedtAt": null,
-        "TypeId": "d20cff25-951a-43b9-b414-48db07d2ecc9",
-        "partnerId": "fa358ce8-98c4-4af1-b519-59ccccba0c11",
-        "partnerStoreId": "24c92f47-0f6d-4e43-872d-6bfb51ed84cd"
-    },
+  {
+    "Name": "حاسوب محمول",
+    "Description": "حاسوب محمول عالي الأداء للعمل والألعاب.",
+    "Price": 1200,
+    "Calories": "N/A",
+    "Allergens": "N/A",
+    "MineImg": "https://example.com/images/laptop_main.jpg",
+    "MoreImgs": [
+      "https://example.com/images/laptop_1.jpg",
+      "https://example.com/images/laptop_2.jpg"
+    ],
+    "deletedtAt": null,
+    "TypeId": "31e5c4d0-ef20-4d59-aa7e-3113b1baef8b",
+    "PartnerId": "618199c0-3a00-402a-b04c-8a2ae88b44fe",
+    "partnerStoreId": "ae4b37c6-c00f-4592-b878-3961cabba011"
+  },
 
 
-    {
-        "Name": "أحذية رياضية",
-        "Description": "أحذية رياضية خفيفة الوزن توفر توسيدًا ممتازًا.",
-        "Price": 100,
-        "Calories": "N/A",
-        "Allergens": "N/A",
-        "MineImg": "https://example.com/images/shoes_main.jpg",
-        "MoreImgs": [
-            "https://example.com/images/shoes_1.jpg",
-            "https://example.com/images/shoes_2.jpg"
-        ],
-        "deletedtAt": null,
-        "TypeId": "0a9fecc9-ffc7-4079-9b36-dace8ffd169f",
-        "partnerId": "fa358ce8-98c4-4af1-b519-59ccccba0c11",
-        "partnerStoreId": "24c92f47-0f6d-4e43-872d-6bfb51ed84cd"
-    },
+  {
+    "Name": "أحذية رياضية",
+    "Description": "أحذية رياضية خفيفة الوزن توفر توسيدًا ممتازًا.",
+    "Price": 100,
+    "Calories": "N/A",
+    "Allergens": "N/A",
+    "MineImg": "https://example.com/images/shoes_main.jpg",
+    "MoreImgs": [
+      "https://example.com/images/shoes_1.jpg",
+      "https://example.com/images/shoes_2.jpg"
+    ],
+    "deletedtAt": null,
+    "TypeId": "31e5c4d0-ef20-4d59-aa7e-3113b1baef8b",
+    "PartnerId": "618199c0-3a00-402a-b04c-8a2ae88b44fe",
+    "partnerStoreId": "ae4b37c6-c00f-4592-b878-3961cabba011"
+  },
 
 
-    {
-        "Name": "هاتف ذكي",
-        "Description": "هاتف ذكي أنيق وقوي بشاشة رائعة.",
-        "Price": 800,
-        "Calories": "N/A",
-        "Allergens": "N/A",
-        "MineImg": "https://example.com/images/smartphone_main.jpg",
-        "MoreImgs": [
-            "https://example.com/images/smartphone_1.jpg",
-            "https://example.com/images/smartphone_2.jpg"
-        ],
-        "deletedtAt": null,
-        "TypeId": "d20cff25-951a-43b9-b414-48db07d2ecc9",
-        "partnerId": "fa358ce8-98c4-4af1-b519-59ccccba0c11",
-        "partnerStoreId": "24c92f47-0f6d-4e43-872d-6bfb51ed84cd"
-    },
+  {
+    "Name": "هاتف ذكي",
+    "Description": "هاتف ذكي أنيق وقوي بشاشة رائعة.",
+    "Price": 800,
+    "Calories": "N/A",
+    "Allergens": "N/A",
+    "MineImg": "https://example.com/images/smartphone_main.jpg",
+    "MoreImgs": [
+      "https://example.com/images/smartphone_1.jpg",
+      "https://example.com/images/smartphone_2.jpg"
+    ],
+    "deletedtAt": null,
+    "TypeId": "31e5c4d0-ef20-4d59-aa7e-3113b1baef8b",
+    "PartnerId": "618199c0-3a00-402a-b04c-8a2ae88b44fe",
+    "partnerStoreId": "ae4b37c6-c00f-4592-b878-3961cabba011"
+  },
 
 
-    {
-        "Name": "مصباح مكتبي",
-        "Description": "مصباح مكتبي حديث بسطوع قابل للتعديل.",
-        "Price": 40,
-        "Calories": "N/A",
-        "Allergens": "N/A",
-        "MineImg": "https://example.com/images/lamp_main.jpg",
-        "MoreImgs": [
-            "https://example.com/images/lamp_1.jpg",
-            "https://example.com/images/lamp_2.jpg"
-        ],
-        "deletedtAt": null,
-        "TypeId": "c7172938-1d4e-4ffa-847a-4547bf3f5d03",
-        "partnerId": "fa358ce8-98c4-4af1-b519-59ccccba0c11"
-    },
+  {
+    "Name": "مصباح مكتبي",
+    "Description": "مصباح مكتبي حديث بسطوع قابل للتعديل.",
+    "Price": 40,
+    "Calories": "N/A",
+    "Allergens": "N/A",
+    "MineImg": "https://example.com/images/lamp_main.jpg",
+    "MoreImgs": [
+      "https://example.com/images/lamp_1.jpg",
+      "https://example.com/images/lamp_2.jpg"
+    ],
+    "deletedtAt": null,
+    "TypeId": "31e5c4d0-ef20-4d59-aa7e-3113b1baef8b",
+    "PartnerId": "618199c0-3a00-402a-b04c-8a2ae88b44fe",
+    "partnerStoreId": "ae4b37c6-c00f-4592-b878-3961cabba011"
+  },
 
 
-    {
-        "Name": "زجاجة ماء",
-        "Description": "زجاجة ماء متينة وصديقة للبيئة.",
-        "Price": 20,
-        "Calories": "N/A",
-        "Allergens": "N/A",
-        "MineImg": "https://example.com/images/bottle_main.jpg",
-        "MoreImgs": [
-            "https://example.com/images/bottle_1.jpg",
-            "https://example.com/images/bottle_2.jpg"
-        ],
-        "deletedtAt": null,
-        "TypeId": "d1dc64e6-944c-48f3-9289-176215402f7a",
-        "partnerId": "fa358ce8-98c4-4af1-b519-59ccccba0c11"
-    },
+  {
+    "Name": "زجاجة ماء",
+    "Description": "زجاجة ماء متينة وصديقة للبيئة.",
+    "Price": 20,
+    "Calories": "N/A",
+    "Allergens": "N/A",
+    "MineImg": "https://example.com/images/bottle_main.jpg",
+    "MoreImgs": [
+      "https://example.com/images/bottle_1.jpg",
+      "https://example.com/images/bottle_2.jpg"
+    ],
+    "deletedtAt": null,
+    "TypeId": "31e5c4d0-ef20-4d59-aa7e-3113b1baef8b",
+    "PartnerId": "618199c0-3a00-402a-b04c-8a2ae88b44fe",
+    "partnerStoreId": "ae4b37c6-c00f-4592-b878-3961cabba011"
+  },
 
 
-    {
-        "Name": "حقيبة ظهر",
-        "Description": "حقيبة ظهر واسعة تحتوي على عدة أقسام.",
-        "Price": 70,
-        "Calories": "N/A",
-        "Allergens": "N/A",
-        "MineImg": "https://example.com/images/backpack_main.jpg",
-        "MoreImgs": [
-            "https://example.com/images/backpack_1.jpg",
-            "https://example.com/images/backpack_2.jpg"
-        ],
-        "deletedtAt": null,
-        "TypeId": "0a9fecc9-ffc7-4079-9b36-dace8ffd169f",
-        "partnerId": "fa358ce8-98c4-4af1-b519-59ccccba0c11"
-    },
+  {
+    "Name": "حقيبة ظهر",
+    "Description": "حقيبة ظهر واسعة تحتوي على عدة أقسام.",
+    "Price": 70,
+    "Calories": "N/A",
+    "Allergens": "N/A",
+    "MineImg": "https://example.com/images/backpack_main.jpg",
+    "MoreImgs": [
+      "https://example.com/images/backpack_1.jpg",
+      "https://example.com/images/backpack_2.jpg"
+    ],
+    "deletedtAt": null,
+    "TypeId": "31e5c4d0-ef20-4d59-aa7e-3113b1baef8b",
+    "PartnerId": "618199c0-3a00-402a-b04c-8a2ae88b44fe",
+    "partnerStoreId": "ae4b37c6-c00f-4592-b878-3961cabba011"
+  },
 
 
 
-    {
-        "Name": "كوب قهوة",
-        "Description": "كوب قهوة من السيراميك بمقبض مريح.",
-        "Price": 15,
-        "Calories": "N/A",
-        "Allergens": "N/A",
-        "MineImg": "https://example.com/images/mug_main.jpg",
-        "MoreImgs": [
-            "https://example.com/images/mug_1.jpg",
-            "https://example.com/images/mug_2.jpg"
-        ],
-        "deletedtAt": null,
-        "TypeId": "d1dc64e6-944c-48f3-9289-176215402f7a",
-        "partnerId": "fa358ce8-98c4-4af1-b519-59ccccba0c11"
-    }
+  {
+    "Name": "كوب قهوة",
+    "Description": "كوب قهوة من السيراميك بمقبض مريح.",
+    "Price": 15,
+    "Calories": "N/A",
+    "Allergens": "N/A",
+    "MineImg": "https://example.com/images/mug_main.jpg",
+    "MoreImgs": [
+      "https://example.com/images/mug_1.jpg",
+      "https://example.com/images/mug_2.jpg"
+    ],
+    "deletedtAt": null,
+    "TypeId": "31e5c4d0-ef20-4d59-aa7e-3113b1baef8b",
+    "PartnerId": "618199c0-3a00-402a-b04c-8a2ae88b44fe",
+    "partnerStoreId": "ae4b37c6-c00f-4592-b878-3961cabba011"
+  }
 
 
 ]

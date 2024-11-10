@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using momken_backend.Models;
-using Microsoft.Extensions.Configuration; 
+using Microsoft.Extensions.Configuration;
+using momken_backend4d.Models;
 namespace momken_backend.Data
 {
     public class AppDbContext:DbContext
@@ -17,6 +18,7 @@ namespace momken_backend.Data
 
         #region  Db Sets
 
+        public DbSet<PartnerStoreRate> partnerStoreRates { get; set; }
         public DbSet<PartnerStoreClientReview> ReviewsOfClient { get; set; }
         public DbSet<OrdersClient> orders { get; set; }
         public DbSet<Partner> Partners { get; set; }
@@ -37,7 +39,8 @@ namespace momken_backend.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
- 
+
+            modelBuilder.Entity<PartnerStoreRate>().HasKey(p => new { p.clientId, p.partnerStoreId });
         }
     }
     

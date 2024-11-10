@@ -15,7 +15,7 @@ namespace momken_backend.Controllers.Zahran
 {
     [Route("api/v1/client/[Controller]")]
     [ApiController]
-    //[Authorize(AuthenticationSchemes = "client")]
+    [Authorize(AuthenticationSchemes = "client")]
     public class OrderController : ControllerBase
     {
 

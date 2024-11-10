@@ -17,6 +17,7 @@ namespace momken_backend.Dtos.Zahran
         [Required]
         public int[] DeliveryType { get; set; }
         public Guid? TypeId { get; set; }
+        public string? TypeName { get; set; }
         public string ImgStore { get; set; }
 
         #region commented Properties

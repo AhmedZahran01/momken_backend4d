@@ -8,7 +8,7 @@ namespace momken_backend.Models
 
         #region  Properties Region
 
-        public Guid clientId { get; set; }
+        public Guid? clientId { get; set; }
         public Guid partnerStoreId { get; set; }
 
         public string ReviewMessage { get; set; }

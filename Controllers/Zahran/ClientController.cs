@@ -191,8 +191,7 @@ namespace momken_backend.Controllers.Zahran
                 GetAllPartnerStoreTypesDtos.Add(new PartnerStoreTypeCategoriesDto
                 {
                     Id = type.Id,
-                    Name = type.Name,
-
+                    Name = type.Name, 
                 });
             }
 
@@ -215,18 +214,17 @@ namespace momken_backend.Controllers.Zahran
         [HttpGet("Get All Partner Store Or Specific One By It is Id")]
         public async Task<IActionResult> GetAllPartnerStore(Guid? partnerStoreTypeById)
         {
-            var GetAllPartnerStores =  _context.PartnerStores
-                   .Select(store => new Dtos.Zahran.PartnerStoreDto
+            var GetAllPartnerStores = _context.PartnerStores
+                   .Select( store => new Dtos.Zahran.PartnerStoreDto
                    {
-                        Id = store.Id,
-                        City = store.City,
-                        StoreName = store.StoreName,
-                        ImgStore = store.ImgStore,
-                        FirstName = store.FirstName,
-                        FamilyName = store.FamilyName,
-                        TypeId = store.TypeId,
-                  
-                   
+                       Id = store.Id,
+                       City = store.City,
+                       StoreName = store.StoreName,
+                       ImgStore = store.ImgStore,
+                       FirstName = store.FirstName,
+                       FamilyName = store.FamilyName,
+                       TypeId = store.TypeId,
+                       TypeName =  _context.PartnerStoreTypes.Where(t => t.Id == store.TypeId).Select(t => t.Name).FirstOrDefault()
                    });
 
             if (partnerStoreTypeById is not null)
